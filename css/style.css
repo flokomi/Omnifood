@@ -48,19 +48,10 @@ body {
   font-weight: 400;
   color: #555;
 }
-.hero-section {
-  background-color: #fdf2e9;
-  padding: 9.6rem 0;
-}
 
-.hero {
-  width: 130rem;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 9.6rem;
-  align-items: center;
-}
+/*************************/
+/* GENERAL COMPONENTS */
+/*************************/
 
 .heading-primary {
   font-size: 5.2rem;
@@ -69,12 +60,6 @@ body {
   color: #333;
   letter-spacing: -0.5px;
   margin-bottom: 3.2rem;
-}
-
-.hero-description {
-  font-size: 2rem;
-  line-height: 1.5;
-  margin-bottom: 4.8rem;
 }
 
 .btn:link,
@@ -116,6 +101,53 @@ body {
   box-shadow: inset 0 0 0 3px #fff;
 }
 
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+
+/*************************/
+/* HEADER */
+/*************************/
+
+.header {
+  /* Because we want it to be sticky later */
+  height: 9.6rem;
+
+  padding: 0 4.8rem;
+  background-color: #fdf2e9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  height: 2.2rem;
+}
+
+/*************************/
+/* HERO SECTION */
+/*************************/
+
+.hero-section {
+  background-color: #fdf2e9;
+  padding: 4.8rem 0 9.6rem 0;
+}
+
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
+  align-items: center;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 4.8rem;
+}
+
 .delivered-meals {
   display: flex;
   align-items: center;
@@ -151,8 +183,4 @@ body {
 
 .hero-img {
   width: 100%;
-}
-
-.margin-right-sm {
-  margin-right: 1.6rem !important;
 }
