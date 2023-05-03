@@ -24,7 +24,7 @@
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 3.2rem;
+  gap: 4.8rem;
   font-size: 1.8rem;
 }
 
@@ -590,6 +590,7 @@
 
 .address {
   margin-bottom: 2.4rem;
+  color: #767676;
 }
 
 .footer-nav {
