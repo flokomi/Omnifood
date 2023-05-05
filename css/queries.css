@@ -120,8 +120,9 @@
   }
 
   /* MOBILE NAV */
-  .btm-mobile-nav {
+  .btn-mobile-nav {
     display: block;
+    z-index: 9999;
   }
 
   .main-nav {
