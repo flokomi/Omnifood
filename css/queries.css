@@ -8,6 +8,10 @@
     max-width: 120rem;
   }
 
+  .btn-mobile-nav {
+    display: none;
+  }
+
   .heading-primary {
     font-size: 4.4rem;
   }
