@@ -1,16 +1,16 @@
 ///////////////////////////////////////////////////////////
 // Set current year
-const yearEL = document.querySelector(".year");
+const yearEl = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
-yearEL.textContent = currentYear;
+yearEl.textContent = currentYear;
 
 ///////////////////////////////////////////////////////////
 // Make mobile nav work
-const headerEL = document.querySelector(".header");
-const btnNavEL = document.querySelector(".btn-mobile-nav");
+const headerEl = document.querySelector(".header");
+const btnNavEl = document.querySelector(".btn-mobile-nav");
 
-btnNavEL.addEventListener("click", () => {
-  headerEL.classList.toggle("nav-open");
+btnNavEl.addEventListener("click", () => {
+  headerEl.classList.toggle("nav-open");
 });
 
 ///////////////////////////////////////////////////////////
@@ -37,10 +37,35 @@ allLinks.forEach((link) => {
 
     // Close mobile navigation
     if (link.classList.contains("main-nav-link"))
-      headerEL.classList.toggle("nav-open");
+      headerEl.classList.toggle("nav-open");
   });
 });
 
+///////////////////////////////////////////////////////////
+// Sticky navigation
+const sectionHeroEl = document.querySelector(".section-hero");
+
+const obs = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    console.log(ent);
+
+    if (ent.isIntersecting === false) {
+      document.body.classList.add("sticky");
+    }
+
+    if (ent.isIntersecting === true) {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    // In the viewport
+    root: null,
+    threshold: 0,
+    rootMargin: "-80px",
+  }
+);
+obs.observe(sectionHeroEl);
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
