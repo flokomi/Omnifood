@@ -30,7 +30,7 @@ allLinks.forEach((link) => {
       });
 
     // Scroll to ther links
-    if ((href != "#") & href.startsWith("#")) {
+    if (href !== "#" && href.startsWith("#")) {
       const sectionEl = document.querySelector(href);
       sectionEl.scrollIntoView({ behavior: "smooth" });
     }
